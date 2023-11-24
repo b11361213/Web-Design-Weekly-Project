@@ -1,1 +1,1 @@
-# Weekly-Project
+# Web-Design-Weekly-Project
