@@ -1,0 +1,10 @@
+body {
+    min-width: 200px;
+    min-height: 240px;
+    color: #29393D;
+    background-color: #AFD5D2;
+}
+#qrcode {
+    display: flex;
+    justify-content: center;
+}
