@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html translate="no" lang=zh-Hans-TW>
+    <head>
+        <link rel="icon" type="image/gif" href="image/konata.gif">
+        <link rel="stylesheet" type="text/css" href="i18n-items.css" />
+        <link rel="stylesheet" type="text/css" href="i18n.css" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+        <meta charset="UTF-8">
+        <meta name="google" content="notranslate">
+        <script src="scripts\jquery.js"></script>
+        <script src="scripts\qrcode.js"></script>
+        <script src="scripts\main.js"></script>
+        <title>localhost/form.html</title>
+        <style>
+            body {
+                margin: 0px;
+            }
+            [class="header"] {
+                background-color: #373C38;
+                color: white;
+                font-family: Geist;
+                font-size: 16px;
+                font-weight: 400;
+                margin-bottom: 128px;
+                padding-bottom: 8px;
+                padding-top: 8px;
+                padding: 26px;
+                width: 100%;
+            }
+            [langSelect] span {
+                /* font-family: Geist; */
+                background-color: white;
+                border-radius: 3px;
+                border: solid 1px;
+                color: #373C38;
+                cursor: pointer;
+                padding: 3px;
+            }
+            [loginForm] span {
+                /* font-family: Geist; */
+                background-color: white;
+                border-radius: 3px;
+                border: solid 1px;
+                color: #373C38;
+                cursor: pointer;
+                padding: 3px;
+            }
+            [loginForm] input {
+                margin-left: 6px;
+                margin-right: 6px;
+            }
+            td.langSelect {
+                width: 90%;
+            }
+            /* hr {
+                display: block;
+                margin-right: 0.5em;
+                margin-left: 0.5em;
+                margin-top: 12px;
+                margin-bottom: 128px;
+                border-style: inset;
+                border-width: 1px;
+            } */
+            /* header */
+
+            [title] {
+                margin-right: 26px;
+            }
+            [content] {
+                flex-grow: 1;
+                cursor: pointer;
+                display: flex;
+                padding-right: 50px;
+            }
+            [class="title"] {
+                font-family: EduKai;
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 28px;
+                margin-top: 28px;
+                text-align: center;
+            }
+            [class="date"] {
+                font-family: NotoSefif;
+                font-size: 18px;
+                margin-bottom: 14px;
+                text-align: left;
+            }
+            [class="content"] {
+                font-family: EduKai;
+                font-size: 24px;
+                font-weight: 700;
+                text-align: left;
+                margin-bottom: 16px;
+                margin-top: 18px;
+            }
+            [class="indentSubcontent"] {
+                font-family: EduKai;
+                font-size: 24px;
+                font-weight: 400;
+                margin-bottom: 12px;
+                margin-top: 12px;
+                text-align: left;
+                text-indent: 160px;
+            }
+            [class="subContent"] {
+                /* text-indent: 180px; */
+                font-family: EduKai;
+                font-size: 24px;
+                font-weight: 400;
+                margin-bottom: 12px;
+                margin-top: 12px;
+                text-align: left;
+            }
+            [class="subForm"] {
+                /* background-color: azure; */
+                border: solid 1px;
+                font-family: EduKai;
+                font-size: 22px;
+                font-weight: 400;
+                margin-bottom: 12px;
+                margin-left: 180px;
+                margin-right: 180px;
+                margin-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 32px;
+                padding-top: 12px;
+                text-align: left;
+            }
+            [class="pdf-th"], [class="pdf-td"] {
+                font-family: EduKai;
+                font-size: 20px;
+                padding-top: 20px;
+                padding-right: 40px;
+                text-align: center;
+                margin: 20px;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+            [class="pdf-td"] {
+                padding: 4px;
+            }
+
+
+            #checkboxOption {
+                margin-left: 24px;
+            }
+            #memo {
+                /* position:absolute; */
+                /* right: 12px; */
+                bottom: 4px;
+                font-size: 14px;
+            }
+            flexrow {
+                display: flex;
+                flex-direction: row;
+            }
+            fill010 {
+                flex-grow: 10;
+            }
+            fill001 {
+                flex-grow: 1;
+            }
+            indentTitle {
+                text-indent: 120px;
+            }
+            indentContent001 {
+                text-indent: 160px;
+            }
+            indentContent002 {
+                text-indent: 200px;
+            }
+        </style>
+        <!-- [source](https://gazette.nat.gov.tw/EG_FileManager/eguploadpub/eg026150/ch04/type3/gov30/num13/images/Eg01.pdf) -->
+        <!-- [source](https://www.etax.nat.gov.tw/etwmain/api/functions/etw212w/download/18a49929f0e00000c88d77d84d4a57bf/%E7%A9%BA%E7%99%BD%E6%9B%B8%E8%A1%A8(pdf%E4%B8%AD%E8%8B%B1%E4%B8%A6%E5%88%97).pdf) -->
+        <!-- [災害損失減免使用牌照稅申請書](https://www.etax.nat.gov.tw/etwmain/etw212w/detail/18ad49bbcb20000031d7f1e06ad74269) -->
+        <!-- [download source](https://www.etax.nat.gov.tw/etwmain/etw212w) -->
+        <!-- [i18n Google sheets](https://docs.google.com/spreadsheets/d/1sp-Rw0xcjd-nEMIacbVywY5zIlCbBGr-Ja9EF0DgJfg) -->
+    </head>
+    <body language="Chinese">
+        <table class="header">
+            <tr>
+                <td class="langSelect" rowspan="2">
+                    <span class="langSelect">Language select --</span>
+                    <span class="langSelect" langSelect>
+                        <span onclick="langChange(this);">Chinese</span>
+                        <span onclick="langChange(this);">English</span>
+                    </span>
+                </td>
+                <td loginForm>Username</td>
+                <td loginForm> <input dataMemberUsername type="text" size="12"> </td>
+                <td loginForm rowspan="2"> <span onclick="login();">Submit</span> </td>
+            </tr>
+            <tr>
+                <td loginForm>Password</td>
+                <td loginForm> <input dataMemberPassword type="password" size="12"> </td>
+            </tr>
+        </table>
+        <!-- <hr> -->
+        
+        <!-- title -->
+        <div class="title" i18n="header"></div>
+
+        <!-- date -->
+        <flexrow>
+            <fill010></fill010>
+            <div class="date" i18n="dateOfApplication">2023/09/22</div>
+            <fill001></fill001>
+        </flexrow>
+        
+        <!-- content -->
+        <!-- recipient -->
+        <indentTitle>
+            <div class="content" i18n="recipient">
+                <span class="content" i18n="ministryOfFinance"></span>
+            </div>
+        </indentTitle>
+        
+        <!-- purpose -->
+        <indentTitle>
+            <div class="content" i18n="purpose">
+                <span class="content" i18n="toApplyFor"></span>
+            </div>
+            <div class="indentSubcontent" id="toApplyFor"></div>
+        </indentTitle>
+
+        <!-- description -->
+        <indentTitle>
+            <div class="content" i18n="description"></div>
+        
+            <indentContent001>
+                <div class="subContent" i18n="descriptionA"></div>
+                <div class="subContent" i18n="descriptionB"></div>
+                <indentContent002>
+                    <div class="subContent" i18n="descriptionBA"></div>
+                    <div class="subContent" i18n="descriptionBB"></div>
+                    <div class="subContent" i18n="descriptionBC"></div>
+                    <div class="subContent" i18n="descriptionBD"></div>
+                    <div class="subContent" i18n="descriptionBE"></div>
+                    <div class="subContent" i18n="descriptionBF"></div>
+                    <div class="subContent" i18n="descriptionBG"></div>
+                    <div class="subContent" i18n="descriptionBH"></div>
+                    <div class="subContent" i18n="descriptionBI"></div>
+                </indentContent002>
+            </indentContent001>
+
+            
+            <indentContent001>
+                <div class="subContent" i18n="descriptionC"></div>
+                <indentContent002>
+                    <div class="subContent" i18n="descriptionCA"></div>
+                    <div class="subContent" i18n="descriptionCB"></div>
+                </indentContent002>
+            </indentContent001>
+        </indentTitle>
+        
+        <!-- information -->
+        <indentTitle>
+            <div class="content" i18n="applicantInformation"></div>
+        </indentTitle>
+
+        <!-- information form -->
+        <div class="subForm">
+            <flexrow information>
+                <!-- <span i18n=name></span>
+                <span content></span>
+                <span i18n=identityCardNumber></span>
+                <span content></span> -->
+            </flexrow>
+        </div>
+        
+        <!-- contact form -->
+        <div class="subForm">
+            <flexrow contact></flexrow>
+        </div>
+        
+        <!-- residence -->
+        <div class="subForm" i18n="residence">
+            <flexrow style="flex-wrap: wrap;" residence></flexrow>
+        </div>
+        
+        <!-- address form -->
+        <div class="subForm">
+            <flexrow address></flexrow>
+        </div>
+
+        <!-- footer memo -->
+        <div class="qrcode-bar" style="margin-top: 60px; margin-bottom: 40px; display: flex; align-items: center; justify-content: center">
+            <table class="pdf">
+                <thead>
+                    <tr>
+                        <th class="pdf-th">請領（補發、換發）記帳士證書申請書</th>
+                        <th class="pdf-th">請領（補發、換發）記帳士證書申請書（中英並列）</th>
+                        <th class="pdf-th">災害損失減免使用牌照稅申請書</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="pdf-td">
+                            <img src="" alt="QRCode" id="qrcode1">
+                        </td>
+                        <td class="pdf-td">
+                            <img src="" alt="QRCode" id="qrcode2">
+                        </td>
+                        <td class="pdf-td">
+                            <img src="" alt="QRCode" id="qrcode3">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      
+        <div id="memo">推薦使用 Firefox 瀏覽器瀏覽本網頁，以獲得最佳體驗</div>
+
+        <script>
+            applyForSel($('[id="toApplyFor"]'));
+            residenceSel($('[residence]'));
+
+            fillOut($('[information]'), 'info');
+            fillOut($('[contact]'), 'contact');
+            fillOut($('[address]'), 'address');
+
+            $(document).ready(function() {
+                $.post('query.php', {query: 'retrieve'}, function(element) {
+                    let {arrayResult} = element, result = arrayResult[0];
+                    $('[id="toApplyFor"]').applyForSelect(result);
+                }, 'json');
+
+                $.post('query.php', {query: 'retrieve'}, function(element) {
+                    let {arrayResult} = element, result = arrayResult[0];
+                    $('[class="subForm"]').fillInSelect(result);
+                    $('[class="subForm"]').residenceSelect(result);
+                }, 'json');
+            });
+        </script>
+    </body>
+</html>

@@ -8,3 +8,5 @@
 ### 1208 Week 3 - Python MongoDB
 
 ### 1215 Week 4 - WordPress Elementor Web
+
+### 1222 Week 5 - Rapid LinQR QRCode
