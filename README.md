@@ -10,3 +10,5 @@
 ### 1215 Week 4 - WordPress Elementor Web
 
 ### 1222 Week 5 - Rapid LinQR QRCode
+
+### 1229 Week 6 - Python Email Verification
