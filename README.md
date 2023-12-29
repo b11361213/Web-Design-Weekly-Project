@@ -12,3 +12,4 @@
 ### 1222 Week 5 - Rapid LinQR QRCode
 
 ### 1229 Week 6 - Python Email Verification
+### 1229 Week 6 - Three.js Web 3D Model
