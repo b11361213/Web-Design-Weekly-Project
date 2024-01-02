@@ -13,3 +13,6 @@
 
 ### 1229 Week 6 - Python Email Verification
 ### 1229 Week 6 - Three.js Web 3D Model
+
+### 0105 Week 7 -
+### 0105 Week 7 - Bootstrap Web Design

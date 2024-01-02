@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap 5.3 css & js -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <!-- Shiki Syntax Highlighter -->
+    <script src="https://cdn.jsdelivr.net/npm/shiki"></script>
+
+    <!-- custom css & js -->
+    <link rel="stylesheet" href="assets\styles\conte.css">
+    <script src="conte.js"></script>
+
+    <!-- 誰在一壘？ -->
+    <title>棒球隊棒球隊 | 球員列表</title>
+</head>
+
+<body>
+
+    <div class="container-fluid players-container-style my-5 px-5">
+
+        <!-- title -->
+        <div class="row row-title d-flex">
+            <!-- title and description -->
+            <div class="col-sm-12 col-lg-6 col-xl-5 col-title px-5 py-3 py-sm-3 py-lg-5">
+                <div class="fs-2">棒球隊棒球隊</div>
+                <div class="fs-4">球員列表</div>
+                Image by <a target="_blank"
+                    href="https://www.freepik.com/free-photo/baseball-player-posing-with-helmet-bat_6208886.htm#query=%E9%87%8E%E7%90%83%20%E9%81%B8%E6%89%8B&position=11&from_view=keyword&track=ais">Freepik</a>
+                &emsp;&emsp;Image by <a target="_blank"
+                    href="https://www.freepik.com/free-photo/side-view-man-posing-with-baseball-bat_6209116.htm#page=2&position=30&from_view=collections">Freepik</a>
+            </div>
+
+            <!-- resource botton -->
+            <div class="col-sm-12 col-lg-6 col-xl-5 col-title d-flex justify-content-lg-end align-items-lg-end px-5 py-3 py-sm-3 py-lg-5">
+                <div class="btn-bar">
+                    <!-- BS 5.3 -->
+                    <a class="btn-link" href="https://getbootstrap.com/docs/5.3/getting-started/introduction/"
+                        target="_blank">
+                        <button class="btn btn-outline-secondary btn-lg ms-lg-2 px-4" id="navbar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-file-earmark-code" viewBox="0 0 16 16">
+                                <path
+                                    d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z" />
+                                <path
+                                    d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708z" />
+                            </svg>
+                        </button>
+                    </a>
+                    <!-- Who's on First.txt -->
+                    <a class="btn-link" href="http://itchen.class.kmu.edu.tw/Who_1.txt" target="_blank">
+                        <button class="btn btn-outline-secondary btn-lg ms-2 px-4" id="navbar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor"
+                                class="bi bi-file-earmark-text" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                                <path
+                                    d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
+                            </svg>
+                        </button>
+                    </a>
+                    <!-- Who's on First? -->
+                    <a class="btn-link" href="https://youtu.be/NoFhcYw89EE" target="_blank">
+                        <button class="btn btn-outline-danger btn-lg ms-2 px-4" id="navbar-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-youtube" viewBox="0 0 16 16">
+                                <path
+                                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408z" />
+                            </svg>
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- players -->
+        <div class="row row-players players-1 justify-content-center p-5">
+            <!-- <div class="col-10 col-sm-5 col-md-4 col-lg-3 col-xl-3 col-xxl-2 col-players d-flex justify-content-center m-3 shadow rounded-3">
+                <div class="player text-center justify-content-center p-3">
+                    <img src="${path}" alt="player" class="img-fluid img-player m-1 rounded-2">
+                    <div class="position border-bottom mx-4 mt-1">${position_list[index]}</div>
+                    <div class="name fs-5 fw-bold mt-2">${nickname_list[index]}</div>
+                    <div class="number fs-3 fw-bold">${number_list[index]}</div>
+                </div>
+            </div> -->
+        </div>
+
+        <!-- codeblock -->
+        <div class="row row-codeblock mt-5">
+            <div class="col-sm-12 col-xl-10 col-title p-5">
+                <!-- description -->
+                <div class="mb-1">
+                    Syntax Highlight by
+                    <a href="https://github.com/shikijs/shiki" target="_black">Shiki</a>
+                </div>
+
+                <!-- code -->
+                <code class="codeblock" id="output"></code>
+            </div>
+        </div>
+
+        <script>
+            players($('.players-1'));
+        </script>
+
+    </div>
+
+</body>
+
+</html>

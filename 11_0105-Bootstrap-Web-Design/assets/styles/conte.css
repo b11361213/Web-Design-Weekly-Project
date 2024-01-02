@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "Sarasa UI TC";
+    src: local("/assets/fonts/sarasa-ui-tc-regular.ttf");
+}
+
+body {
+    background-color: #ededed;
+    font-family: "Sarasa UI TC";
+}
+
+.players-container-style { width: 100vw; }
+
+/* title row */
+.row-title {
+    background-color: white;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.btn-link { color: inherit; }
+
+
+/* player row */
+.row-players {
+    background-color: whitesmoke;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.col-players {
+    background-color:white;
+    height: 405px;
+    width: 240px;
+}
+
+.img-player {
+    height: 270px;
+    width: 180px;
+
+}
+
+
+/* codeblock row */
+.row-codeblock {
+    background-color: white;
+    border-radius: 15px;
+}
+
+.codeblock > pre {
+    border-radius: 8px;
+    font-size: 18px;
+    padding-left: 2em;
+    padding-right: 1.2em;
+    padding-bottom: 1.2em;
+}
+
+.codeblock > pre > code { white-space: pre-wrap; }
