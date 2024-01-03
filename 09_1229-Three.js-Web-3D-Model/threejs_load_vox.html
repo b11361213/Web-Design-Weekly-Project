@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js</title>
+
+    <!-- Three.js -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"
+        integrity="sha512-vnmn/Qqn6aG0POAc9mIGzjq0IybrvxJXYDafNvp9JSnDGxeF3pbkSqLvf+YGd5ku63pT7sa/jxHn7/d0mU8+tA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+
+    <script type="importmap">
+        {
+            "imports": {
+            "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+            "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+
+</head>
+
+<style>
+    body {
+        background-color: lightsteelblue;
+        font-family: "Microsoft JhengHei";
+        margin: 0px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar {
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: start;
+        top: 0px;
+        background-color: #AD9A95;
+    }
+
+    .nav-list {
+        width: 50%;
+        display: flex;
+    }
+
+    .nav-list li {
+        list-style: none;
+        padding: 26px 30px;
+    }
+
+    .nav-list li a {
+        font-size: 1.2em;
+        font-weight: 700;
+        text-decoration: none;
+        color: #594945;
+    }
+
+    .nav-list li a:hover {
+        color: #2C2422;
+    }
+</style>
+
+<body>
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <li><a target="_blank" href="https://www.blender.org/">Blender</a></li>
+            <li><a target="_blank" href="https://threejs.org/">Three.js</a></li>
+        </ul>
+    </nav>
+    <script type="module" src="main_load_vox.js"></script>
+</body>
+
+</html>
