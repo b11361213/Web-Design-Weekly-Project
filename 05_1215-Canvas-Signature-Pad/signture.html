@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- szimek/signature_pad: HTML5 canvas based smooth signature drawing -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.1.7/dist/signature_pad.umd.min.js"></script>
+
+    <!-- custom css & -->
+    <link rel="stylesheet" href="assets\styles\styles.css">
+
+    <title>Canvas Signature Pad</title>
+</head>
+
+<body>
+
+    <div class="signature-pad">
+        <div class="bar">
+            <div class="btn-bar">
+                <!-- <button class="btn" onclick="alert('undo!');">復原</button> -->
+                <!-- <button class="btn" onclick="alert('redo!');">重作</button> -->
+                <button class="btn" onclick="clearPad();">清除</button>
+                <button class="btn" onclick="savePad();">存圖</button>
+            </div>
+
+            <div class="library">
+                Signature Pad libray by&nbsp;<a href="https://github.com/szimek/signature_pad"
+                    target="_blank">szimek</a>
+            </div>
+        </div>
+
+        <div class="pad">
+
+            <canvas height="400px" width="1000px" id="pad"></canvas>
+
+        </div>
+    </div>
+
+    <script>
+        let canvas = document.getElementById('pad');
+
+        let signaturePad = new SignaturePad(canvas);
+
+        function resizeCanvas() {
+            const ratio = Math.max(window.devicePixelRatio || 1, 1);
+            canvas.width = canvas.offsetWidth * ratio;
+            canvas.height = canvas.offsetHeight * ratio;
+            canvas.getContext('2d').scale(ratio, ratio);
+            signaturePad.clear(); // otherwise isEmpty() might return incorrect value
+        }
+
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+    </script>
+    <script>
+        function clearPad() {
+            signaturePad.clear();
+        }
+        function savePad() {
+            const padURL = signaturePad.toDataURL();
+            const downloadLink = document.createElement('a');
+            downloadLink.href = padURL;
+            downloadLink.download = 'signaturePad-save.png'
+
+            downloadLink.click();
+        }
+    </script>
+</body>
+
+</html>

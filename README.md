@@ -23,7 +23,7 @@ Week 3
 
 Week 4
 ---
-### 1215 Week 4 - Canvas Signture Pad
+### 1215 Week 4 - Canvas Signature Pad
 ### 1215 Week 4 - WordPress Elementor Web
 
 ---

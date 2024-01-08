@@ -1,0 +1,88 @@
+/* [Color Palette: #607274 #FAEED1 #DED0B6 #B2A59B - Color Hunt](https://colorhunt.co/palette/607274faeed1ded0b6b2a59b) */
+
+@font-face {
+    font-family: "Sarasa Mono TC";
+    src: url("../fonts/SarasaMonoTC-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Sarasa Gothic TC";
+    src: url("../fonts/SarasaGothicTC-Regular.ttf");
+}
+
+body {
+    background-color: #607274;
+    font-family: "Sarasa Gothic TC";
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.signature-pad {
+    /* align-self: center;
+    transform: translate(0%, -20%); */
+
+    border: solid 14px;
+    border-radius: 7px;
+    border-color: #B2A59B;
+}
+
+
+/* bar */
+.bar {
+    display: flex;
+    height: 84px;
+    width: 1000px;
+}
+
+.btn-bar {
+    background-color: #DED0B6;
+    
+    align-items: center;
+    display: flex;
+    height: 84px;
+    width: 700px;
+}
+
+.btn {
+    background-color: #FAEED1;
+    color: #3D3B40;
+    
+    border-radius: 36px;
+    border: none;
+    cursor: pointer;
+    
+    font-family: "Sarasa Gothic TC";
+    font-size: 18px;
+    
+    height: 52px;
+    width: 84px;
+    margin-left: 24px;
+}
+
+.library {
+    background-color: #DED0B6;
+    color: #3D3B40;
+    font-family: "Sarasa Gothic TC";
+    
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    padding-right: 12px;
+    line-height: 40px;
+
+    height: 84px;
+    width: 300px;
+}
+
+
+/* pad */
+.pad {
+    background-color: whitesmoke;
+    height: 400px;
+    width: 1000px;
+}
