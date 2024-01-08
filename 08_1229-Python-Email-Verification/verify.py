@@ -10,12 +10,12 @@ def random_code():
     return str(random.randint(100000, 999999))
 
 def send_email(recipient_email, verification_code):
-    smtp_server = 'a*****t'
+    smtp_server = 'smtp-s***a.net'
     smtp_port = 587  
-    smtp_username = 's*****i'
-    smtp_password = 'e*****t'
+    smtp_username = 's***a.net'
+    smtp_password = 'a***1'
 
-    sender_email = 'shiki@alwaysdata.net'
+    sender_email = 's***t'
     recipient_email = recipient_email
 
     subject = '驗證碼'
