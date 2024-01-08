@@ -44,5 +44,5 @@ Week 6
 
 Week 7
 ---
-### 0105 Week 7 -
+### 0105 Week 7 - Google Chart API
 ### 0105 Week 7 - Bootstrap Web Design

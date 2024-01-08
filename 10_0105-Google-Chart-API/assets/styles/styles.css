@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Sarasa Mono TC";
+    src: url("../fonts/SarasaMonoTC-Regular.ttf");
+}
+
+body {
+    background-color: #424769;
+    color: #F6B17A;
+    font-family: "Sarasa Mono TC";
+    
+    /* align-items: center; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* height: 100vh; */
+    width: 100vw;
+}
+
+a {
+    color: inherit;
+}
+
+.row-title {
+    background-color: #2D3250;
+    height: 420px;
+}
+
+.row-chart-a {
+    background-color: #424769;
+    height: 560px;
+}
+
+.row-chart-b {
+    background-color: #2D3250;
+    height: 560px;
+}
+
+.col-infomation {
+    height: 400px;
+    /* background-color: black; */
+}
+
+.title {
+    color: #E7AB79;
+}
+
+.description {
+    color: #E3CCAE;
+}
+.col-chart {
+    height: 400px;
+    background-color: white;
+}
