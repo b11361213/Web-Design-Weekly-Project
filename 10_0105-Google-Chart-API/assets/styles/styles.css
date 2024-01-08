@@ -1,3 +1,7 @@
+/* [html - What is the browser-default background color when selecting text? - Stack Overflow](https://stackoverflow.com/questions/16094837/what-is-the-browser-default-background-color-when-selecting-text/16094931#16094931) */
+
+/* [::selection - CSS: カスケーディングスタイルシート | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/::selection) */
+
 @font-face {
     font-family: "Sarasa Mono TC";
     src: url("../fonts/SarasaMonoTC-Regular.ttf");
@@ -26,12 +30,12 @@ a {
 
 .row-chart-a {
     background-color: #424769;
-    height: 560px;
+    height: 680px;
 }
 
 .row-chart-b {
     background-color: #2D3250;
-    height: 560px;
+    height: 680px;
 }
 
 .col-infomation {
@@ -46,7 +50,18 @@ a {
 .description {
     color: #E3CCAE;
 }
+
 .col-chart {
-    height: 400px;
-    background-color: white;
+    height: 580px;
+    width: 680px;
+    background-color: #7077A1;
+}
+
+::selection {
+    /* color: white; */
+    background-color: #7077A1;
+}
+
+@media ( max-width: 1200px ) {
+    .col-infomation { display: none; }
 }
