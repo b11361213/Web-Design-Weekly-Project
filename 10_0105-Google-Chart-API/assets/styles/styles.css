@@ -2,6 +2,8 @@
 
 /* [::selection - CSS: カスケーディングスタイルシート | MDN](https://developer.mozilla.org/ja/docs/Web/CSS/::selection) */
 
+/* [Color Palette: #2D3250 #424769 #7077A1 #F6B17A - Color Hunt](https://colorhunt.co/palette/2d32504247697077a1f6b17a) */
+
 @font-face {
     font-family: "Sarasa Mono TC";
     src: url("../fonts/SarasaMonoTC-Regular.ttf");
@@ -30,12 +32,12 @@ a {
 
 .row-chart-a {
     background-color: #424769;
-    height: 680px;
+    height: 1200px;
 }
 
 .row-chart-b {
     background-color: #2D3250;
-    height: 680px;
+    height: 1200px;
 }
 
 .col-infomation {
@@ -52,8 +54,8 @@ a {
 }
 
 .col-chart {
-    height: 580px;
-    width: 680px;
+    height: 1000px;
+    width: 980px;
     background-color: #7077A1;
 }
 
@@ -62,6 +64,6 @@ a {
     background-color: #7077A1;
 }
 
-@media ( max-width: 1200px ) {
+@media ( max-width: 1560px ) {
     .col-infomation { display: none; }
 }
