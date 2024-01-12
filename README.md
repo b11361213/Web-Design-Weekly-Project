@@ -46,3 +46,10 @@ Week 7
 ---
 ### 0105 Week 7 - Google Chart API
 ### 0105 Week 7 - Bootstrap Web Design
+
+---
+
+Week 8
+---
+### 0112 Week 8 - * Firebase NoSQL Database
+### 0112 Week 8 - Leonardo.Ai Image Generation
